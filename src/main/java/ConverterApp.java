@@ -9,6 +9,8 @@ public class ConverterApp {
     private JButton applyButton;
     private JTextField pathField;
     private JTextArea outputLog;
+    private JTextField outputPath;
+    private JTextField outputName;
 
     public ConverterApp() {
         applyButton.addActionListener(new ActionListener() {
@@ -16,9 +18,12 @@ public class ConverterApp {
             public void actionPerformed(ActionEvent e) {
                 if(pathField.getText()!=null){
                     Converter converter = new Converter();
-                    Path path = Paths.get(pathField.getText());
-                    String text = converter.getImgText(path.toString());
+                    Path inputPath = Paths.get(pathField.getText());
+                    Path outputPath = Paths.get(pathField.getText());
+                    String text = converter.getImgText(inputPath.toString());
                     System.out.println(text);
+                    converter.docFromText(text, outputPath.toString(), outputName.getText());
+                    System.out.println("Success!!!");
                 }
                 else {
                     outputLog.setText("path didn't set");
