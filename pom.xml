@@ -13,14 +13,6 @@
         <maven.compiler.target>17</maven.compiler.target>
     </properties>
 
-    <repositories>
-        <repository>
-            <id>com.e-iceblue</id>
-            <name>e-iceblue</name>
-            <url>https://repo.e-iceblue.com/nexus/content/groups/public/</url>
-        </repository>
-    </repositories>
-
 
     <dependencies>
         <!--photo convertation -->
@@ -45,5 +37,6 @@
             <artifactId>commons-io</artifactId>
             <version>1.4</version>
         </dependency>
+
     </dependencies>
 </project>

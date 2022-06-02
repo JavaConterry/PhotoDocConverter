@@ -22,8 +22,9 @@ public class ConverterApp {
                     Path outputPath = Paths.get(pathField.getText());
                     String text = converter.getImgText(inputPath.toString());
                     System.out.println(text);
-                    converter.docFromText(text, outputPath.toString(), outputName.getText());
-                    System.out.println("Success!!!");
+                    outputLog.setText(text);
+//                    converter.docFromText(text, outputPath.toString(), outputName.getText());
+//                    System.out.println("Success!!!");
                 }
                 else {
                     outputLog.setText("path didn't set");
